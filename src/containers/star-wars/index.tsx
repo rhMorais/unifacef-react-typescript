@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Card, Grid, Header, Image } from 'semantic-ui-react';
+import { Container, Grid, Header, Card, Image } from 'semantic-ui-react';
 import { inject, observer } from 'mobx-react';
 import NewRouterStore from '../../mobx/router.store';
 import StarWarsStore from './store';
