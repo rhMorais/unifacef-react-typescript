@@ -1,12 +1,12 @@
 import { getCountries, getSummary } from './../../apis/corona.api';
 import { observable, computed, action } from 'mobx';
-import { ISummary, ICountry } from '../../apis/corona.api';
+import { ISummary, ICountryB } from '../../apis/corona.api';
 import { assign } from '../../utils/object.util';
 
 export default class CoronaStore {
   @observable countryCode: string = '';
   @observable summary?: ISummary;
-  @observable countries: ICountry[] = [];
+  @observable countries: ICountryB[] = [];
 
   @computed get countriesFiltered() {
     return (this.summary?.Countries?.filter((x) => this.countryCode === '' || x.Country === this.countryCode))
