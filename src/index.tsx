@@ -11,6 +11,7 @@ import { SentryError } from './components/sentry-error';
 import { syncHistoryWithStore } from 'mobx-react-router';
 import './index.css';
 import './plugins/sentry.plugin';
+import './plugins/one-signal.plugin';
 import 'semantic-ui-css/semantic.min.css';
 import Loading from './components/loading';
 import './apis/axios.api';
@@ -33,4 +34,4 @@ ReactDOM.render(
   </React.StrictMode>,
   rootElement
 );
-serviceWorker.register();
+serviceWorker.unregister();
